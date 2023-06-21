@@ -10,7 +10,7 @@ namespace WebAPIFM.Controllers
 {
     public class EmployeeController : ApiController
     {
-
+        //This the method to return the employees
         public List<Employee> GetEmployees()
         {
             List<Employee> employees = new List<Employee>();
