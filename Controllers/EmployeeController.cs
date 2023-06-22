@@ -10,7 +10,7 @@ namespace WebAPIFM.Controllers
 {
     public class EmployeeController : ApiController
     {
-        //This the method to return the employees
+        
         public List<Employee> GetEmployees()
         {
             List<Employee> employees = new List<Employee>();
@@ -18,7 +18,7 @@ namespace WebAPIFM.Controllers
             employees = testDBEntities.Employees.ToList();
             return employees;
         }
-
+        //Get the employee details by ID
         public Employee GetEmployee(int id)
         {
             TestDBEntities testDBEntities = new TestDBEntities();
@@ -64,6 +64,11 @@ namespace WebAPIFM.Controllers
             testDBEntities.SaveChanges();
             return "The EMployee is created";
 
+        }
+
+        public void PrintDetail()
+        {
+            //Add some logic
         }
 
     }
